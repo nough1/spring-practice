@@ -2,7 +2,7 @@ package com.nou.mad;
 
 import com.nou.mad.config.annotation.ConfigurationHelloWorld;
 import com.nou.mad.controller.PersonController;
-import com.nou.mad.model.Person;
+import com.nou.mad.model.ConfigurationInitBean;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -22,14 +22,18 @@ public class ConfigurationHelloWorldTest {
     @Test
     public void testGetBean(){
 
-        Person person = applicationContext.getBean(Person.class);
-        System.out.println(person);
+       /* ConfigurationInitBean configurationInitBean = applicationContext.getBean(ConfigurationInitBean.class);
+        System.out.println(configurationInitBean);
 
         ConfigurationHelloWorld configurationHelloWorld = applicationContext.getBean(ConfigurationHelloWorld.class);
         System.out.println(configurationHelloWorld);
 
         PersonController personController = applicationContext.getBean(PersonController.class);
-        System.out.println(personController);
+        System.out.println(personController);*/
+
+        for (String beanDefinitionName : applicationContext.getBeanDefinitionNames()) {
+            System.out.println("bean:"+beanDefinitionName+","+applicationContext.getBean(beanDefinitionName));
+        }
 
     }
 }

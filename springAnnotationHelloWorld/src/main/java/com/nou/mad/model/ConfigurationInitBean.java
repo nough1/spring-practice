@@ -1,6 +1,6 @@
 package com.nou.mad.model;
 
-public class Person {
+public class ConfigurationInitBean {
     private String name;
 
     private int age;

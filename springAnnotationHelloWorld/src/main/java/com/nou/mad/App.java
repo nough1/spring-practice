@@ -1,8 +1,5 @@
 package com.nou.mad;
 
-import com.nou.mad.model.Person;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 /**
  * Hello world!
  *
